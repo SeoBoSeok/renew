@@ -31,8 +31,8 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
             $mail->Host = G5_SMTP; // SMTP server
             if(defined('G5_SMTP_PORT') && G5_SMTP_PORT) {
                 $mail->Port = G5_SMTP_PORT;
-                $mail->SMTPSecure = "ssl";
                 $mail->SMTPAuth = true;
+                $mail->SMTPSecure = "TLS";
                 $mail->Username = G5_SMTP_USER;
                 $mail->Password = G5_SMTP_P;
             }
